@@ -209,7 +209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1344975386910998
 GameObject:
   m_ObjectHideFlags: 1
@@ -1447,8 +1447,10 @@ MonoBehaviour:
   brakeSpeed: 0.025
   maxSpeed: 0.19
   gainSpeedPerSecond: 0.018
+  hiddenMaxSpeed: 0
   speed: 0
   switchWalkRun: 0.06
+  slowed: 0
 --- !u!124 &124374859897604622
 Behaviour:
   m_ObjectHideFlags: 1

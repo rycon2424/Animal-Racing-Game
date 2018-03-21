@@ -11,6 +11,8 @@ public class RacePlayer : MonoBehaviour {
 	public float maxSpeed;
 	public float gainSpeedPerSecond;
 
+	public float hiddenMaxSpeed;
+
 	[Header("INGAMESPEED")]
 	public float speed;
 
@@ -18,11 +20,16 @@ public class RacePlayer : MonoBehaviour {
 	public float switchWalkRun;
 	bool gainSpeed = true;
 
+	[Header("CharacterState")]
+	public bool slowed = false;
+	bool slowPlayer = true;
+
 	Animator anim;
 
 	void Start ()
 	{
 		anim = GetComponent<Animator> ();
+		hiddenMaxSpeed = maxSpeed;
 	}
 
 	void Update () 
@@ -30,6 +37,12 @@ public class RacePlayer : MonoBehaviour {
 		#region movement
 
 		transform.Translate (Vector3.forward * speed);
+
+		if (slowed == true && slowPlayer == true)
+		{
+			maxSpeed = maxSpeed * 0.5f;
+			slowPlayer = false;
+		}
 
 		if (Input.GetKey(KeyCode.W) && gainSpeed == true)
 		{
@@ -101,6 +114,32 @@ public class RacePlayer : MonoBehaviour {
 		yield return new WaitForSeconds (0.3f);
 		speed = speed - speedDecrease;
 		gainSpeed = true;
+	}
+
+	#endregion
+
+	#region Triggers
+
+	void OnTriggerStay(Collider col)
+	{
+
+		if (col.gameObject.tag == "Slow")
+		{
+			slowed = true;
+		}
+	
+	}
+
+	void OnTriggerExit(Collider col)
+	{
+
+		if (col.gameObject.tag == "Slow" )
+		{
+			slowed = false;
+			slowPlayer = true;
+			maxSpeed = hiddenMaxSpeed;
+		}
+
 	}
 
 	#endregion

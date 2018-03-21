@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 4737736341207340}
   - component: {fileID: 95682641435573150}
   - component: {fileID: 114464898262173142}
+  - component: {fileID: 114599831962675158}
   - component: {fileID: 65694841878503930}
   - component: {fileID: 54151469746501524}
   m_Layer: 0
@@ -376,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1497070717728548
 GameObject:
   m_ObjectHideFlags: 1
@@ -1391,8 +1392,27 @@ MonoBehaviour:
   brakeSpeed: 0.001
   maxSpeed: 0.25
   gainSpeedPerSecond: 0.022
+  hiddenMaxSpeed: 0
   speed: 0.02
   switchWalkRun: 0.05
+  slowed: 0
+--- !u!114 &114599831962675158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495472296777102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66abe4d7a7f989c4dbb83703ad5b8eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qCooldown: 0
+  qUse: 1
+  slowResistant: 0
+  eCooldown: 15
+  eDuration: 5
+  eUse: 1
 --- !u!124 &124523204216654120
 Behaviour:
   m_ObjectHideFlags: 1
