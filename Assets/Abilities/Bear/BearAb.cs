@@ -9,6 +9,8 @@ public class BearAb : MonoBehaviour {
 	[Header("Q ABILITY")]
 	public float qCooldown;
 	public bool qUse = true;
+	public Transform fearBall;
+	public Transform bearMouth;
 
 	[Header("E ABILITY")]
 	public bool slowResistant = false;
@@ -44,13 +46,13 @@ public class BearAb : MonoBehaviour {
 
 	IEnumerator Qcooldown()
 	{
+		Instantiate (fearBall, bearMouth.transform.position, bearMouth.transform.rotation);
 		yield return new WaitForSeconds (qCooldown);
-		eUse = true;
+		qUse = true;
 	}
 
 	IEnumerator Ecooldown()
 	{
-
 		slowResistant = true;
 		yield return new WaitForSeconds (eDuration);
 		slowResistant = false;

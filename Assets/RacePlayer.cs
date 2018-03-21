@@ -23,6 +23,10 @@ public class RacePlayer : MonoBehaviour {
 	[Header("CharacterState")]
 	public bool slowed = false;
 	bool slowPlayer = true;
+	public bool fearPlayer = true;
+	public bool stunned;
+
+	public GameObject stunIndicator;
 
 	Animator anim;
 
@@ -30,6 +34,7 @@ public class RacePlayer : MonoBehaviour {
 	{
 		anim = GetComponent<Animator> ();
 		hiddenMaxSpeed = maxSpeed;
+		stunIndicator.SetActive (false);
 	}
 
 	void Update () 
@@ -42,6 +47,11 @@ public class RacePlayer : MonoBehaviour {
 		{
 			maxSpeed = maxSpeed * 0.5f;
 			slowPlayer = false;
+		}
+
+		if (stunned == true)
+		{
+			speed = 0;
 		}
 
 		if (Input.GetKey(KeyCode.W) && gainSpeed == true)
@@ -120,12 +130,30 @@ public class RacePlayer : MonoBehaviour {
 
 	#region Triggers
 
+
+	void OnTriggerEnter(Collider col)
+	{
+
+		if (col.gameObject.tag == "Stun")
+		{
+			stunned = true;
+			StartCoroutine(StunDuration());
+		}
+
+	}
+
 	void OnTriggerStay(Collider col)
 	{
 
 		if (col.gameObject.tag == "Slow")
 		{
 			slowed = true;
+		}
+
+		if (col.gameObject.tag == "Fear" && fearPlayer == true) 
+		{
+			StartCoroutine(Feared());
+			fearPlayer = false;
 		}
 	
 	}
@@ -144,4 +172,22 @@ public class RacePlayer : MonoBehaviour {
 
 	#endregion
 
+	#region Enums
+
+	IEnumerator Feared()
+	{
+		maxSpeed = maxSpeed * 0.3f;
+		yield return new WaitForSeconds (2f);
+		maxSpeed = hiddenMaxSpeed;
+	}
+
+	IEnumerator StunDuration()
+	{
+		stunIndicator.SetActive (true);
+		yield return new WaitForSeconds (2f);
+		stunned = false;
+		stunIndicator.SetActive (false);
+	}
+
+	#endregion
 }

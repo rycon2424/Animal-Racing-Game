@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Abilities\Bear\BearAb.cs" />
+     <Compile Include="Assets\Abilities\Bear\FearBall.cs" />
      <Compile Include="Assets\Abilities\Deer\DeerAb.cs" />
      <Compile Include="Assets\Abilities\Deer\DeerClones.cs" />
+     <Compile Include="Assets\Abilities\StunnedEffect.cs" />
      <Compile Include="Assets\Animal pack deluxe\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\RacePlayer.cs" />
  <Reference Include="UnityEngine.UI">
