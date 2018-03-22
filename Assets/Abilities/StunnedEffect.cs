@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StunnedEffect : MonoBehaviour {
 
+	public int rotation;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -13,6 +15,6 @@ public class StunnedEffect : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.Rotate (0,5,0);
+		transform.Rotate (0,rotation,0);
 	}
 }
