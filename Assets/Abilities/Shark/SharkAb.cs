@@ -18,6 +18,9 @@ public class SharkAb : MonoBehaviour {
 
 	BoxCollider sharkE;
 
+	private bool canUseQ = true;
+	private bool canUseE = true;
+
 	void Start () 
 	{
 		sharkE = GetComponent<BoxCollider> ();
@@ -27,13 +30,13 @@ public class SharkAb : MonoBehaviour {
 	void Update () 
 	{
 
-		if (Input.GetKey(KeyCode.Q) && qUse == true)
+		if (Input.GetKey(KeyCode.Q) && qUse == true && canUseQ == true)
 		{
 			StartCoroutine(Qcooldown());
 			qUse = false;
 		}
 
-		if (Input.GetKey(KeyCode.E) && eUse == true)
+		if (Input.GetKey(KeyCode.E) && eUse == true && canUseE == true)
 		{
 			StartCoroutine(Ecooldown());
 			eUse = false;
@@ -43,9 +46,11 @@ public class SharkAb : MonoBehaviour {
 
 	IEnumerator Qcooldown()
 	{
+		canUseE = false;
 		transform.localScale = new Vector3 (2 , 2 , 2);
 		yield return new WaitForSeconds (qDuration);
 		transform.localScale = new Vector3 (1 , 1 , 1);
+		canUseE = true;
 		yield return new WaitForSeconds (qCooldown);
 		qUse = true;
 	}
@@ -53,14 +58,16 @@ public class SharkAb : MonoBehaviour {
 	IEnumerator Ecooldown()
 	{
 		sharkE.enabled = false;;
+		canUseQ = false;
 		sharkBody.transform.position = new Vector3 (sharkBody.transform.position.x,
-		sharkBody.transform.position.y - 1.4f, sharkBody.transform.position.z);
+		sharkBody.transform.position.y - 1.7f, sharkBody.transform.position.z);
 		undergroundCol.SetActive (true);
 		yield return new WaitForSeconds (eDuration);
 		sharkBody.transform.position = new Vector3 (sharkBody.transform.position.x,
-		sharkBody.transform.position.y + 1.4f, sharkBody.transform.position.z);
+		sharkBody.transform.position.y + 1.7f, sharkBody.transform.position.z);
 		sharkE.enabled = true;
 		undergroundCol.SetActive (false);
+		canUseQ = true;
 		yield return new WaitForSeconds (eCooldown);
 		eUse = true;
 	}

@@ -8,9 +8,7 @@ public class FearBall : MonoBehaviour {
 
 	void Start () 
 	{
-		Bear = GameObject.Find("Bear");
 		StartCoroutine (Destroy ());
-		this.gameObject.transform.parent = Bear.transform;
 	}
 
 	void Update () 
