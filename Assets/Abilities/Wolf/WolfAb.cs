@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WolfAb : MonoBehaviour {
 
+	RacePlayer wolfScript;
+
 	[Header("Q ABILITY")]
 	public bool qUse = true;
 	public float qCooldown;
@@ -17,6 +19,7 @@ public class WolfAb : MonoBehaviour {
 
 	void Start () 
 	{
+		wolfScript = this.gameObject.GetComponent<RacePlayer>();
 		sword.SetActive (false);
 	}
 
