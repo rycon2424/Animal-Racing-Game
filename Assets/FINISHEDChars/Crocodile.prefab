@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 54954422701166784}
   m_Layer: 0
   m_Name: Crocodile
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

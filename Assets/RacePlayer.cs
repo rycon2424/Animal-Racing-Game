@@ -5,28 +5,28 @@ using UnityEngine;
 public class RacePlayer : MonoBehaviour {
 
 	[Header("SpeedTopics")]
-	public float rotationSpeed;
-	public float speedDecrease;
-	public float brakeSpeed;
-	public float maxSpeed;
-	public float gainSpeedPerSecond;
+	public float rotationSpeed;				//the speed how quick the animal can make turns
+	public float speedDecrease;				//the speed the animal loses every second
+	public float brakeSpeed;				//the speed of how quick the animal brakes
+	public float maxSpeed;					//max speed the animal can reach
+	public float gainSpeedPerSecond;		//speed that the animal gains every second
 
-	public float hiddenMaxSpeed;
+	public float hiddenMaxSpeed;			//save point for the max speed
 
 	[Header("INGAMESPEED")]
-	public float speed;
+	public float speed;						//the speed ingame
 
 	[Header("WhenAnimations")]
-	public float switchWalkRun;
+	public float switchWalkRun;				//the variable when the animation switches to run
 	bool gainSpeed = true;
 
-	[Header("CharacterState")]
+	[Header("CharacterState")]				//status effects for every effect implemented in the game
 	public bool slowed = false;
 	bool slowPlayer = true;
 	public bool fearPlayer = true;
 	public bool stunned;
 
-	public GameObject stunIndicator;
+	public GameObject stunIndicator;		//indicator above the animal that displays if the animal is stunned
 
 	Animator anim;
 
@@ -37,7 +37,7 @@ public class RacePlayer : MonoBehaviour {
 		stunIndicator.SetActive (false);
 	}
 
-	void Update () 
+	void Update ()
 	{
 		#region movement
 
@@ -114,7 +114,6 @@ public class RacePlayer : MonoBehaviour {
 		}
 
 		#endregion
-
 	}
 
 	#region speedGain
