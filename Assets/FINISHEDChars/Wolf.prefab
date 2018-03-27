@@ -2113,7 +2113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489725188770020}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.9568944, y: 0.10000003, z: -1.024}
+  m_LocalPosition: {x: 7.09, y: 0.10000003, z: -1.024}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4937077486405096}
@@ -2675,6 +2675,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b86c6cd49d979a4fa9fe04c3a36a84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qUse: 1
+  qCooldown: 12
+  qDuration: 3
+  sword: {fileID: 1810890433392372}
+  eUse: 1
+  eCooldown: 0
+  eDuration: 0
 --- !u!114 &114109651055949666
 MonoBehaviour:
   m_ObjectHideFlags: 1

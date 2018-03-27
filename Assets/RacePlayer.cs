@@ -140,6 +140,11 @@ public class RacePlayer : MonoBehaviour {
 			StartCoroutine(StunDuration());
 		}
 
+		if (col.gameObject.tag == "wolfSword")
+		{
+			transform.Rotate (0,180,0);
+		}
+
 	}
 
 	void OnTriggerStay(Collider col)
