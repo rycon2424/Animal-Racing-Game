@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 54453725001486380}
   m_Layer: 0
   m_Name: Wolf
-  m_TagString: Player
+  m_TagString: Wolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2735,7 +2735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  Enemy: {fileID: 0}
+  enemy: {fileID: 0}
+  wolf: {fileID: 1489725188770020}
 --- !u!114 &114076228277133394
 MonoBehaviour:
   m_ObjectHideFlags: 1

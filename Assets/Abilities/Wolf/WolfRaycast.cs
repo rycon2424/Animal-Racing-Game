@@ -12,12 +12,12 @@ public class WolfRaycast : MonoBehaviour {
 
 	bool startTimer = true;
 	bool lookat = false;
-	public GameObject Enemy;
-	public GameObject Wolf;
+	public GameObject enemy;
+	public GameObject wolf;
 
 	void Start () 
 	{
-		wolfScript = Wolf.gameObject.GetComponent<RacePlayer>();
+		wolfScript = wolf.gameObject.GetComponent<RacePlayer>();
 	}
 
 	void Update ()
@@ -33,8 +33,20 @@ public class WolfRaycast : MonoBehaviour {
 
 		if (lookat == true) 
 		{
-			transform.LookAt(Enemy.transform.position);
+			transform.LookAt(enemy.transform.position);
 			transform.Rotate(new Vector3(-3.2f, 0, 0), Space.Self);
+		}
+
+		//Debug.Log ("hmmm");
+
+		if (this.gameObject.transform.rotation.y > 80)
+		{
+			Debug.Log ("lose");
+		}
+
+		if (this.gameObject.transform.rotation.y < -80)
+		{
+			Debug.Log("lose");
 		}
 			
 			myRay1 = new Ray (transform.position, transform.forward);
@@ -43,7 +55,7 @@ public class WolfRaycast : MonoBehaviour {
 			{
 				if (hit.collider.tag == "Player")
 				{
-					Enemy = hit.collider.gameObject;
+					enemy = hit.collider.gameObject;
 					lookat = true;
 					wolfScript.gainSpeedPerSecond = 0.05f;
 					wolfScript.maxSpeed = 0.26f;
@@ -53,11 +65,9 @@ public class WolfRaycast : MonoBehaviour {
 
 	IEnumerator Timer()
 	{
-		
 	yield return new WaitForSecondsRealtime(2);
 	speed = speed * -1;
 	startTimer = true;
-
 	}
 
 }
