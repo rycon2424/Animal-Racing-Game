@@ -806,6 +806,35 @@ Prefab:
       propertyPath: m_TagString
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 1492673273391140, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076228277133394, guid: 561bb35af531e7f40ac9f2a07c228297,
+        type: 2}
+      propertyPath: eCooldown
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076228277133394, guid: 561bb35af531e7f40ac9f2a07c228297,
+        type: 2}
+      propertyPath: eDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076228277133394, guid: 561bb35af531e7f40ac9f2a07c228297,
+        type: 2}
+      propertyPath: rayScan
+      value: 
+      objectReference: {fileID: 1860132714}
+    - target: {fileID: 114052740752378978, guid: 561bb35af531e7f40ac9f2a07c228297,
+        type: 2}
+      propertyPath: eCooldown
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052740752378978, guid: 561bb35af531e7f40ac9f2a07c228297,
+        type: 2}
+      propertyPath: eDuration
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
   m_IsPrefabParent: 0
@@ -1415,6 +1444,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114652821379420500, guid: 2298721af6a873a49b467a43f2c45715,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2298721af6a873a49b467a43f2c45715, type: 2}
   m_IsPrefabParent: 0
@@ -1595,6 +1629,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3d30aefedb80834e9fcfc2d94b93b62, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1860132714 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1492673273391140, guid: 561bb35af531e7f40ac9f2a07c228297,
+    type: 2}
+  m_PrefabInternal: {fileID: 810775617}
 --- !u!1 &1861775856
 GameObject:
   m_ObjectHideFlags: 0

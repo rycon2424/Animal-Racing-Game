@@ -12,11 +12,6 @@ public class WolfAb : MonoBehaviour {
 	public float qDuration;
 	public GameObject sword;
 
-	[Header("E ABILITY")]
-	public bool eUse = true;
-	public float eCooldown;
-	public float eDuration;
-
 	void Start () 
 	{
 		wolfScript = this.gameObject.GetComponent<RacePlayer>();
@@ -30,12 +25,6 @@ public class WolfAb : MonoBehaviour {
 			StartCoroutine(Qcooldown());
 			qUse = false;
 		}
-
-		if (Input.GetKey(KeyCode.E) && eUse == true)
-		{
-			//StartCoroutine(Ecooldown());
-			eUse = false;
-		}
 	}
 
 	IEnumerator Qcooldown()
@@ -46,10 +35,5 @@ public class WolfAb : MonoBehaviour {
 		yield return new WaitForSeconds (qCooldown);
 		qUse = true;
 	}
-
-	/*IEnumerator Ecooldown()
-	{
-
-	}*/
 
 }
