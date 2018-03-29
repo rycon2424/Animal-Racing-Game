@@ -326,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &156918626
 Transform:
   m_ObjectHideFlags: 0
@@ -787,24 +787,6 @@ Prefab:
     - target: {fileID: 4944071453977054, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489725188770020, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114052740752378978, guid: 561bb35af531e7f40ac9f2a07c228297,
-        type: 2}
-      propertyPath: Enemy
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114052740752378978, guid: 561bb35af531e7f40ac9f2a07c228297,
-        type: 2}
-      propertyPath: Wolf
-      value: 
-      objectReference: {fileID: 1673238814}
-    - target: {fileID: 1489725188770020, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
-      propertyPath: m_TagString
-      value: Wolf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 561bb35af531e7f40ac9f2a07c228297, type: 2}
@@ -1544,11 +1526,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd4e3c63e42fcf8439998edb38d47bbf, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1673238814 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1489725188770020, guid: 561bb35af531e7f40ac9f2a07c228297,
-    type: 2}
-  m_PrefabInternal: {fileID: 810775617}
 --- !u!1001 &1853811396
 Prefab:
   m_ObjectHideFlags: 0
