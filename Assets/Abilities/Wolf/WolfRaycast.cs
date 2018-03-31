@@ -73,7 +73,6 @@ public class WolfRaycast : MonoBehaviour {
 			wolfScript.gainSpeedPerSecond = 0.018f;
 			wolfScript.maxSpeed = 0.22f;
 		}
-
 	}
 
 	IEnumerator Timer()
@@ -92,6 +91,7 @@ public class WolfRaycast : MonoBehaviour {
 		Enemy = null;
 		lookat = false;
 		speed = 0.6f;
+		transform.localRotation = Quaternion.Euler (0, -10, 0);
 		yield return new WaitForSeconds (eCooldown);
 		eUse = true;
 	}
