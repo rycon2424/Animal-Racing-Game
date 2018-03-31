@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 54453725001486380}
   m_Layer: 0
   m_Name: Wolf
-  m_TagString: Player
+  m_TagString: Wolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1275,13 +1275,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1567378258190734}
-  m_LocalRotation: {x: 0, y: -0.08715578, z: 0, w: 0.9961947}
+  m_LocalRotation: {x: 0, y: -0.043619405, z: 0, w: 0.9990483}
   m_LocalPosition: {x: 0, y: 0.67, z: 1.075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4328179502802614}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -10, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -5, z: 0}
 --- !u!4 &4136116167249480
 Transform:
   m_ObjectHideFlags: 1
@@ -2171,7 +2171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489725188770020}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.09, y: 0.10000003, z: -1.024}
+  m_LocalPosition: {x: 8.6, y: 0.10000003, z: -1.25}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4937077486405096}
@@ -2734,8 +2734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb1252aedc016c4589057ac3e28cfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 0.6
   Enemy: {fileID: 0}
+  Wolf: {fileID: 1489725188770020}
+  opgeslagenV3: {x: 0, y: 0, z: 0}
+  eUse: 1
+  eCooldown: 8
+  eDuration: 4
 --- !u!114 &114076228277133394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2751,9 +2756,6 @@ MonoBehaviour:
   qCooldown: 12
   qDuration: 3
   sword: {fileID: 1810890433392372}
-  eUse: 1
-  eCooldown: 0
-  eDuration: 0
 --- !u!114 &114109651055949666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2789,6 +2791,7 @@ MonoBehaviour:
   fearPlayer: 1
   stunned: 0
   stunIndicator: {fileID: 1030445438079602}
+  anim: {fileID: 0}
 --- !u!114 &114325096972667710
 MonoBehaviour:
   m_ObjectHideFlags: 1

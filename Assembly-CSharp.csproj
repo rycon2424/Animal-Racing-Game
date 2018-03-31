@@ -56,7 +56,9 @@
      <Compile Include="Assets\Abilities\Crocodile\CrocAb.cs" />
      <Compile Include="Assets\Abilities\Deer\DeerAb.cs" />
      <Compile Include="Assets\Abilities\Deer\DeerClones.cs" />
+     <Compile Include="Assets\Abilities\Rabbit\RabbitAb.cs" />
      <Compile Include="Assets\Abilities\Shark\SharkAb.cs" />
+     <Compile Include="Assets\Abilities\Snail\SlimeBall.cs" />
      <Compile Include="Assets\Abilities\Snail\SlimeTrail.cs" />
      <Compile Include="Assets\Abilities\Snail\SnailAb.cs" />
      <Compile Include="Assets\Abilities\StunnedEffect.cs" />

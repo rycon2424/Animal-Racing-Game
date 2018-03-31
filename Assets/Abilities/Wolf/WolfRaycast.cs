@@ -78,17 +78,20 @@ public class WolfRaycast : MonoBehaviour {
 
 	IEnumerator Timer()
 	{
-		
-	yield return new WaitForSecondsRealtime(2);
+	yield return new WaitForSecondsRealtime(1);
 	speed = speed * -1;
 	startTimer = true;
-
 	}
 
 	IEnumerator Ecooldown()
 	{
 		yield return new WaitForSeconds (eDuration);
+		wolfScript.gainSpeedPerSecond = 0.018f;
+		wolfScript.maxSpeed = 0.22f;
 		rayScanTest = false;
+		Enemy = null;
+		lookat = false;
+		speed = 0.6f;
 		yield return new WaitForSeconds (eCooldown);
 		eUse = true;
 	}

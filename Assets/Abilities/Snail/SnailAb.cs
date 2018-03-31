@@ -7,7 +7,6 @@ public class SnailAb : MonoBehaviour {
 	[Header("Q ABILITY")]
 	public bool qUse = true;
 	public float qCooldown;
-	public float qDuration;
 	public Transform slimeBall;
 	public Transform slimeBallSpawn;
 
@@ -52,7 +51,7 @@ public class SnailAb : MonoBehaviour {
 
 	IEnumerator Qcooldown()
 	{
-		yield return new WaitForSeconds (qDuration);
+		Instantiate (slimeBall, slimeBallSpawn.position, slimeBallSpawn.rotation);
 		yield return new WaitForSeconds (qCooldown);
 		qUse = true;
 	}

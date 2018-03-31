@@ -11,12 +11,14 @@ public class BearAb : MonoBehaviour {
 	public bool qUse = true;
 	public Transform fearBall;
 	public Transform bearMouth;
+	public float currentSpeed;
 
 	[Header("E ABILITY")]
 	public bool slowResistant = false;
 	public float eCooldown;
 	public float eDuration;
 	public bool eUse = true;
+	bool slowImune = false;
 
 	void Start () 
 	{
@@ -34,8 +36,16 @@ public class BearAb : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.E) && eUse == true)
 		{
+			currentSpeed = slowResist.speed;
 			StartCoroutine(Ecooldown());
 			eUse = false;
+			slowImune = true;
+		}
+
+		if (slowResist.slowed == true && eUse == false && slowImune == true)
+		{
+			slowResist.speed = currentSpeed;
+			slowResist.slowed = false;
 		}
 
 		if (slowResistant == true)
@@ -55,6 +65,7 @@ public class BearAb : MonoBehaviour {
 	{
 		slowResistant = true;
 		yield return new WaitForSeconds (eDuration);
+		slowImune = false;
 		slowResistant = false;
 		yield return new WaitForSeconds (eCooldown);
 		eUse = true;

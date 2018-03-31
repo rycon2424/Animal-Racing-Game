@@ -509,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1497070717728548
 GameObject:
   m_ObjectHideFlags: 1
@@ -2336,6 +2336,7 @@ MonoBehaviour:
   fearPlayer: 1
   stunned: 0
   stunIndicator: {fileID: 1773768844813744}
+  anim: {fileID: 0}
 --- !u!114 &114599831962675158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2351,6 +2352,7 @@ MonoBehaviour:
   qUse: 1
   fearBall: {fileID: 4129705428935990, guid: 9d30c60828931884eb7435aa8e597780, type: 2}
   bearMouth: {fileID: 4810348844822616}
+  currentSpeed: 0
   slowResistant: 0
   eCooldown: 15
   eDuration: 5

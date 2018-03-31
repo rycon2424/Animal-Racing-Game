@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SlimeTrail : MonoBehaviour {
 
-	// Use this for initialization
+	public float destroyTime;
+
 	void Start () 
 	{
-		Destroy (this.gameObject, 5);
+		Destroy (this.gameObject, destroyTime);
 	}
 }

@@ -51,7 +51,7 @@ public class CrocAb : MonoBehaviour {
 	{
 		CrocScript.anim.enabled = false;
 		CrocScript.maxSpeed = 0.30f;
-		CrocScript.rotationSpeed = 0.2f;
+		CrocScript.rotationSpeed = 0.8f;
 		CrocScript.speed = CrocScript.speed + 0.1f;
 		yield return new WaitForSeconds (eDuration);
 		CrocScript.anim.enabled = true;

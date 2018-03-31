@@ -504,6 +504,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1885947262461492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4151354581416746}
+  m_Layer: 0
+  m_Name: BallSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1918321531273774
 GameObject:
   m_ObjectHideFlags: 1
@@ -587,7 +602,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538685762724424}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.52, y: 0.132, z: -0.38}
+  m_LocalPosition: {x: 3.52, y: 0.132, z: 0.05}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4962766571202100}
@@ -599,6 +614,7 @@ Transform:
   - {fileID: 4435373121973084}
   - {fileID: 4318444567908282}
   - {fileID: 4070888822368792}
+  - {fileID: 4151354581416746}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -695,6 +711,19 @@ Transform:
   - {fileID: 4273229127833154}
   m_Father: {fileID: 4962766571202100}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4151354581416746
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885947262461492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0821, z: 0.2188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4021682304113538}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4152437563418378
 Transform:
@@ -1496,10 +1525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qUse: 1
-  qCooldown: 0
-  qDuration: 0
-  slimeBall: {fileID: 0}
-  slimeBallSpawn: {fileID: 0}
+  qCooldown: 10
+  slimeBall: {fileID: 4607004498691426, guid: bad9090a7bb4338428f578bc8bc95120, type: 2}
+  slimeBallSpawn: {fileID: 4151354581416746}
   eUse: 1
   eCooldown: 12
   eDuration: 1.5

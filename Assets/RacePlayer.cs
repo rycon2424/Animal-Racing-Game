@@ -25,6 +25,7 @@ public class RacePlayer : MonoBehaviour {
 	bool slowPlayer = true;
 	public bool fearPlayer = true;
 	public bool stunned;
+	bool canBe180ed = true;
 
 	public GameObject stunIndicator;		//indicator above the animal that displays if the animal is stunned
 
@@ -139,8 +140,10 @@ public class RacePlayer : MonoBehaviour {
 			StartCoroutine(StunDuration());
 		}
 
-		if (col.gameObject.tag == "wolfSword")
+		if (col.gameObject.tag == "wolfSword" && canBe180ed == true)
 		{
+			canBe180ed = false;
+			StartCoroutine(WolfSword());
 			transform.Rotate (0,180,0);
 		}
 
@@ -185,10 +188,16 @@ public class RacePlayer : MonoBehaviour {
 		maxSpeed = hiddenMaxSpeed;
 	}
 
+	IEnumerator WolfSword()
+	{
+		yield return new WaitForSeconds (2f);
+		canBe180ed = true;
+	}
+
 	IEnumerator StunDuration()
 	{
 		stunIndicator.SetActive (true);
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (1.3f);
 		stunned = false;
 		stunIndicator.SetActive (false);
 	}
