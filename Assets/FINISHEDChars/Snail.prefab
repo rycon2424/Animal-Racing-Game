@@ -138,6 +138,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1278097368820022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4070888822368792}
+  m_Layer: 0
+  m_Name: TrailSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1311097764826176
 GameObject:
   m_ObjectHideFlags: 1
@@ -243,6 +258,7 @@ GameObject:
   - component: {fileID: 4021682304113538}
   - component: {fileID: 95324500967990960}
   - component: {fileID: 114217475807020556}
+  - component: {fileID: 114508244402157732}
   - component: {fileID: 65863277095188892}
   - component: {fileID: 54080671666026340}
   m_Layer: 0
@@ -251,7 +267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1597364536786686
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +587,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538685762724424}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.74, y: 0.132, z: -0.38}
+  m_LocalPosition: {x: 3.52, y: 0.132, z: -0.38}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4962766571202100}
@@ -582,6 +598,7 @@ Transform:
   - {fileID: 4559617702229016}
   - {fileID: 4435373121973084}
   - {fileID: 4318444567908282}
+  - {fileID: 4070888822368792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -610,6 +627,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4125581188366202}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4070888822368792
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278097368820022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.02, z: -0.193}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4021682304113538}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4073130448300228
 Transform:
@@ -1453,6 +1483,28 @@ MonoBehaviour:
   fearPlayer: 1
   stunned: 0
   stunIndicator: {fileID: 1467739173024654}
+  anim: {fileID: 0}
+--- !u!114 &114508244402157732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538685762724424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c49d7668685b8c48adedf7eaae0adf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qUse: 1
+  qCooldown: 0
+  qDuration: 0
+  slimeBall: {fileID: 0}
+  slimeBallSpawn: {fileID: 0}
+  eUse: 1
+  eCooldown: 12
+  eDuration: 1.5
+  slimeTrailSpawn: {fileID: 4070888822368792}
+  slimeTrail: {fileID: 4023463877632900, guid: e698187849e877c4792a2b9be42e541d, type: 2}
 --- !u!114 &114634846418874722
 MonoBehaviour:
   m_ObjectHideFlags: 1

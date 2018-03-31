@@ -28,7 +28,7 @@ public class RacePlayer : MonoBehaviour {
 
 	public GameObject stunIndicator;		//indicator above the animal that displays if the animal is stunned
 
-	Animator anim;
+	public Animator anim;
 
 	void Start ()
 	{
@@ -80,7 +80,7 @@ public class RacePlayer : MonoBehaviour {
 			transform.Rotate (0 ,rotationSpeed ,0);
 		}
 
-		#endregion
+		#endregion   //All the movement
 
 		#region speedcap
 
@@ -95,7 +95,7 @@ public class RacePlayer : MonoBehaviour {
 		}
 
 
-        #endregion
+        #endregion   //The maxSpeed the animal can reach
 
 		#region animation
 
@@ -113,7 +113,7 @@ public class RacePlayer : MonoBehaviour {
 			anim.SetInteger ("State", 2);
 		}
 
-		#endregion
+		#endregion  //When what animation plays and at what speed it goed to running
 	}
 
 	#region speedGain
@@ -125,7 +125,7 @@ public class RacePlayer : MonoBehaviour {
 		gainSpeed = true;
 	}
 
-	#endregion
+	#endregion	  //The speed the animal gains every second
 
 	#region Triggers
 
@@ -174,7 +174,7 @@ public class RacePlayer : MonoBehaviour {
 
 	}
 
-	#endregion
+	#endregion	   //Trigger Colliders
 
 	#region Enums
 
@@ -193,5 +193,5 @@ public class RacePlayer : MonoBehaviour {
 		stunIndicator.SetActive (false);
 	}
 
-	#endregion
+	#endregion		 //Every time related event
 }

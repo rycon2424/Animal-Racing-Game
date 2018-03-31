@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 4480326552158968}
   - component: {fileID: 95998975260750150}
   - component: {fileID: 114341907633999492}
+  - component: {fileID: 114667237573208080}
   - component: {fileID: 65212595637614748}
   - component: {fileID: 54954422701166784}
   m_Layer: 0
@@ -259,7 +260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1344975386910998
 GameObject:
   m_ObjectHideFlags: 1
@@ -799,6 +800,22 @@ GameObject:
   m_Layer: 0
   m_Name: Crocodile_l_FrontLeg_AnkleSHJnt
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1715446103508978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4923585251993484}
+  - component: {fileID: 65252519017844810}
+  m_Layer: 0
+  m_Name: Bite
+  m_TagString: Stun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1421,13 +1438,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340920164788154}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.5, y: 0.118, z: 0.1}
+  m_LocalPosition: {x: 5.05, y: 0.118, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4850620092135084}
   - {fileID: 4134626652606214}
   - {fileID: 4053018821685514}
   - {fileID: 4745592892944444}
+  - {fileID: 4923585251993484}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -1826,6 +1844,19 @@ Transform:
   - {fileID: 4479829720271824}
   m_Father: {fileID: 4745592892944444}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4923585251993484
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715446103508978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 1.687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4480326552158968}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4932681293288998
 Transform:
@@ -2259,6 +2290,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.51977396, z: 4.6584578}
   m_Center: {x: -2.4513405e-15, y: 0.24011302, z: -0.827502}
+--- !u!65 &65252519017844810
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715446103508978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6967058, y: 0.4913144, z: 0.13280569}
+  m_Center: {x: 0.034608632, y: 0.2543428, z: -0.024407066}
 --- !u!95 &95998975260750150
 Animator:
   serializedVersion: 3
@@ -2335,6 +2378,7 @@ MonoBehaviour:
   fearPlayer: 1
   stunned: 0
   stunIndicator: {fileID: 1483912701338336}
+  anim: {fileID: 0}
 --- !u!114 &114463615660440702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2347,6 +2391,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 5
+--- !u!114 &114667237573208080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340920164788154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c692667ab4bb14841a4fb985dc56dbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qUse: 1
+  qCooldown: 10
+  qDuration: 5
+  Bite: {fileID: 1715446103508978}
+  eUse: 1
+  eCooldown: 11
+  eDuration: 1
 --- !u!114 &114700235313100830
 MonoBehaviour:
   m_ObjectHideFlags: 1
