@@ -8,6 +8,7 @@ public class SharkAb : MonoBehaviour {
 	public bool qUse = true;
 	public float qCooldown;
 	public float qDuration;
+	public GameObject stunCol;
 
 	[Header("E ABILITY")]
 	public bool eUse = true;
@@ -25,6 +26,7 @@ public class SharkAb : MonoBehaviour {
 	{
 		sharkE = GetComponent<BoxCollider> ();
 		undergroundCol.SetActive (false);
+		stunCol.SetActive (false);
 	}
 
 	void Update () 
@@ -48,7 +50,9 @@ public class SharkAb : MonoBehaviour {
 	{
 		canUseE = false;
 		transform.localScale = new Vector3 (2 , 2 , 2);
+		stunCol.SetActive (true);
 		yield return new WaitForSeconds (qDuration);
+		stunCol.SetActive (false);
 		transform.localScale = new Vector3 (1 , 1 , 1);
 		canUseE = true;
 		yield return new WaitForSeconds (qCooldown);

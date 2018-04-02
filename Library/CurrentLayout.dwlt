@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 998
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 113
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,7 +237,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 20}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -407,21 +407,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: c0f4ffffcef4ffff36f5ffff6af5ffffc0f5ffff78f9ffff9efbffff00000000
+    m_ExpandedIDs: b4d2feff2216ffff2e74ffff32e7ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Wolf
-      m_OriginalName: Wolf
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -1662
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.276333, y: 0.77244186, z: -1.8275491}
+    m_Target: {x: -6.711508, y: -1.122158, z: -4.1149693}
     speed: 2
-    m_Value: {x: 6.276333, y: 0.77244186, z: -1.8275491}
+    m_Value: {x: -6.711508, y: -1.122158, z: -4.1149693}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -489,13 +489,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.119589716, y: 0.8551409, z: -0.2270434, w: -0.45042604}
+    m_Target: {x: 0.00306445, y: 0.9358539, z: -0.35228106, w: 0.008140718}
     speed: 2
-    m_Value: {x: -0.119589716, y: 0.8551409, z: -0.2270434, w: -0.45042604}
+    m_Value: {x: 0.00306445, y: 0.9358539, z: -0.35228106, w: 0.008140718}
   m_Size:
-    m_Target: 10.263035
+    m_Target: 19.07584
     speed: 2
-    m_Value: 10.263035
+    m_Value: 19.07584
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -573,19 +573,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Abilities
+    - Assets/FINISHEDChars
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Abilities
+  - Assets/FINISHEDChars
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\pc\Documents\Animal Racing Game
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 21}
-    m_SelectedIDs: 402e0000
-    m_LastClickedID: 11840
-    m_ExpandedIDs: 0000000094270000402e000088320000a83f0000aa3f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 022f0000
+    m_LastClickedID: 12034
+    m_ExpandedIDs: 0000000094270000402e0000d231000088320000a83f0000aa3f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000088d7ffffec24000012250000a02b0000c456feff562800001a2e00005c420000e02d00000a2900003429000000000000683000001a560000caec0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
