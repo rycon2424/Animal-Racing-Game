@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MultplayerRacingGame.unity
+- path: Assets/TestChamber.unity
   isLoaded: 1
   isActive: 1

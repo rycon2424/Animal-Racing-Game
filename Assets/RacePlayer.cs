@@ -114,7 +114,7 @@ public class RacePlayer : MonoBehaviour {
 			anim.SetInteger ("State", 2);
 		}
 
-		#endregion  //When what animation plays and at what speed it goed to running
+		#endregion  //When what animation plays and at what speed it goes to running
 	}
 
 	#region speedGain
