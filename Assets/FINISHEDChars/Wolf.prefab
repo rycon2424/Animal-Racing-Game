@@ -533,6 +533,8 @@ GameObject:
   - component: {fileID: 114076228277133394}
   - component: {fileID: 65108688273983590}
   - component: {fileID: 54453725001486380}
+  - component: {fileID: 114075359911060214}
+  - component: {fileID: 114496326535318882}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Wolf
@@ -1334,7 +1336,7 @@ Transform:
   m_LocalScale: {x: 0.8333341, y: 0.8333333, z: 0.833334}
   m_Children: []
   m_Father: {fileID: 4944071453977054}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: -90, z: 0}
 --- !u!4 &4199356158544158
 Transform:
@@ -1731,7 +1733,7 @@ Transform:
   m_LocalScale: {x: 32.327625, y: 32.327625, z: 32.327625}
   m_Children: []
   m_Father: {fileID: 4944071453977054}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4523423562802258
 Transform:
@@ -2148,7 +2150,7 @@ Transform:
   m_Children:
   - {fileID: 4422553837069378}
   m_Father: {fileID: 4944071453977054}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4940252291149088
 Transform:
@@ -2174,9 +2176,9 @@ Transform:
   m_LocalPosition: {x: 8.6, y: 0.10000003, z: -1.25}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
+  - {fileID: 4170352571205518}
   - {fileID: 4937077486405096}
   - {fileID: 4511950564220004}
-  - {fileID: 4170352571205518}
   - {fileID: 4213539905063372}
   - {fileID: 4328179502802614}
   m_Father: {fileID: 0}
@@ -2256,7 +2258,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126178970105474}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2739,8 +2741,40 @@ MonoBehaviour:
   Wolf: {fileID: 1489725188770020}
   opgeslagenV3: {x: 0, y: 0, z: 0}
   eUse: 1
-  eCooldown: 8
+  eCooldown: 16
   eDuration: 4
+--- !u!114 &114075359911060214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489725188770020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 86
+    i1: 27
+    i2: 179
+    i3: 90
+    i4: 245
+    i5: 49
+    i6: 231
+    i7: 244
+    i8: 10
+    i9: 201
+    i10: 242
+    i11: 160
+    i12: 124
+    i13: 34
+    i14: 130
+    i15: 151
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114076228277133394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2816,6 +2850,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 5
+--- !u!114 &114496326535318882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489725188770020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114620583055736204
 MonoBehaviour:
   m_ObjectHideFlags: 1

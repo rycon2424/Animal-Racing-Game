@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class RacePlayer : MonoBehaviour {
+public class RacePlayer : NetworkBehaviour {
 
 	[Header("SpeedTopics")]
 	public float rotationSpeed;				//the speed how quick the animal can make turns
@@ -33,6 +34,11 @@ public class RacePlayer : MonoBehaviour {
 
 	void Start ()
 	{
+		if (isLocalPlayer) {
+			this.transform.GetChild (0).gameObject.GetComponent<Camera> ().enabled = true;
+		} else {
+			this.transform.GetChild (0).gameObject.GetComponent<Camera> ().enabled = false;
+		}
 		anim = GetComponent<Animator> ();
 		hiddenMaxSpeed = maxSpeed;
 		stunIndicator.SetActive (false);
